@@ -8,7 +8,7 @@ Simple but useful. I've always wanted to use this kind of header in my projects 
 
 ## Demo
 
-![Demo](https://media.giphy.com/media/w7waGojMm5ggjYxccv/giphy.gif)
+![Demo](https://i.giphy.com/media/w7waGojMm5ggjYxccv/giphy.webp)
 
 ## Example
 

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('screen')
 
-class Collapsable extends Component {
+export default class Collapsable extends Component {
   constructor(props) {
     super(props);
     this.state = {

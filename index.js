@@ -20,7 +20,9 @@ export default class Collapsable extends Component {
       expandedHeader,
       collapsedHeight,
       expandedHeight,
+      containerStyle,
       scrollContainerStyle,
+      headerContainerStyle,
     } = this.props;
 
     const HEADER_EXPANDED_HEIGHT = expandedHeight;
@@ -44,10 +46,8 @@ export default class Collapsable extends Component {
       extrapolate: 'clamp',
     });
 
-    const headerTitle = "Title";
-
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, containerStyle]}>
         <Animated.View style={[styles.header, headerContainerStyle, { height: headerHeight }]}>
           <Animated.View style={{
               position: 'absolute',

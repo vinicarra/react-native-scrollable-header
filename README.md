@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/survey-monkey-streams.svg)](//npmjs.com/package/react-native-scrollable-header)
+
 # Scrollable Header
 
 Simple but useful. I've always wanted to use this kind of header in my projects and I've tried many solutions available but most of them had issues with the core feature: the header. Based on that, I've created this EXTREME basic header that JUST scrolls the header: that's all. It's simple so anyone can read this code and make changes if needed (hopefully you don't need).

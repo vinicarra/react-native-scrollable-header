@@ -1,6 +1,6 @@
 {
   "name": "react-native-scrollable-header",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple collapsable header.",
   "main": "index.js",
   "scripts": {

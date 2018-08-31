@@ -48,6 +48,19 @@ export default class Collapsable extends Component {
 
     return (
       <View style={[styles.container, containerStyle]}>
+        <ScrollView
+          contentContainerStyle={[styles.scrollContainer, scrollContainerStyle, { paddingTop: HEADER_EXPANDED_HEIGHT + 10, zIndex: 1 }]}
+          onScroll={Animated.event([{
+            nativeEvent: {
+              contentOffset: {
+                y: this.state.scrollY,
+              }
+            }
+          }])}
+          scrollEventThrottle={16}
+        >
+          {content()}
+        </ScrollView>
         <Animated.View style={[styles.header, headerContainerStyle, { height: headerHeight }]}>
           <Animated.View style={{
               position: 'absolute',
@@ -69,19 +82,6 @@ export default class Collapsable extends Component {
             {expandedHeader()}
           </Animated.View>
         </Animated.View>
-        <ScrollView
-          contentContainerStyle={[styles.scrollContainer, scrollContainerStyle, { paddingTop: HEADER_EXPANDED_HEIGHT + 10, zIndex: 1 }]}
-          onScroll={Animated.event([{
-            nativeEvent: {
-              contentOffset: {
-                y: this.state.scrollY,
-              }
-            }
-          }])}
-          scrollEventThrottle={16}
-        >
-          {content()}
-        </ScrollView>
       </View>
     );
   }
@@ -101,7 +101,6 @@ Collapsable.props = {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#eaeaea',
     },
     scrollContainer: {
       padding: 16,
@@ -109,6 +108,7 @@ const styles = StyleSheet.create({
     header: {
       position: 'absolute',
       width: SCREEN_WIDTH,
+      top: 0,
       left: 0,
       zIndex: 9999
     },
